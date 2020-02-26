@@ -1,0 +1,66 @@
+@import "../components/variables";
+.footer {
+    margin-bottom: 1px;
+    background-color: $color-white;
+    justify-content: center;
+    padding: 10px 0px;
+}
+
+.footer-titulo {
+    h2 {
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 40px;
+        margin-bottom: 5px;
+        text-align: center;
+        color: grey;
+    }
+}
+
+.footer-address {
+    p {
+        font-weight: bold;
+        margin-bottom: 0;
+        margin-top: 0;
+        text-align: center;
+    }
+}
+
+.footer-icons {
+    text-align: center;
+    margin: 20px 0px 10px;
+    font-size: 24px;
+    .fa {
+        width: 30px;
+        height: 30px;
+        margin: 0 5px;
+    }
+}
+
+
+/* MEDIA QUERIES */
+
+
+/* DESKTOP */
+
+@media all and (min-width: $break-large) {
+    .footer-titulo {
+        h2 {
+            font-size: 12px;
+        }
+    }
+    .footer-address {
+        p {
+            font-weight: normal;
+            font-size: 18px;
+        }
+    }
+    .footer-icons {
+        text-align: center;
+        margin: 20px 0px 10px;
+        font-size: 20px;
+    }
+}
+
+
+/* Footer end */

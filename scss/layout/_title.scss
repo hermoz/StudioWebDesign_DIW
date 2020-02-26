@@ -1,0 +1,73 @@
+@import "../components/variables";
+* {
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    /*background-color: ;*/
+}
+
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    background-color: #bbb;
+}
+
+a {
+    color: $color-black;
+}
+
+#container {
+    background-image: url('imagenes/img1.jpg');
+    background-repeat: no-repeat;
+    height: 280px;
+    width: 400px;
+}
+
+#content {
+    position: absolute;
+    height: auto;
+    width: auto;
+    top: 200px;
+    left: 40px;
+    h1 {
+        color: $color-white;
+        font-weight: normal;
+        font-size: 30px;
+    }
+    p {
+        color: $color-red;
+    }
+}
+
+
+/* MEDIA QUERIES */
+
+
+/* TABLET */
+
+@media screen and (min-width: $break-small) {
+    #container {
+        height: 350px;
+        width: auto;
+    }
+    #content {
+        top: 250px;
+    }
+}
+
+
+/* DESKTOP */
+
+@media all and (min-width: $break-large) {
+    #container {
+        height: 300px;
+        width: auto;
+    }
+    #content {
+        top: 200px;
+    }
+    #content h1 {
+        color: $color-white;
+        font-weight: normal;
+        font-size: 35px;
+    }
+}

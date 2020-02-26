@@ -1,0 +1,154 @@
+/* inicio header */
+
+@import "../components/variables";
+.header {
+    background-color: $color-white;
+    position: absolute;
+    z-index: 1;
+    top: -2px;
+    width: 100%;
+    ul {
+        margin: 15;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        background-color: $color-white;
+        text-align: center;
+    }
+    li {
+        a {
+            display: block;
+            padding: 20px 20px;
+            border-right: 1px solid $color-grey;
+            text-decoration: none;
+            &:hover {
+                background-color: $color-grey;
+            }
+        }
+    }
+    .menu-btn {
+        &:hover {
+            background-color: $color-grey;
+        }
+        display: none;
+        &:checked~.menu {
+            max-height: 300px;
+        }
+    }
+    .nav-logo {
+        a {
+            img {
+                float: left;
+                position: relative;
+                margin: 10px 15px 10px 35px;
+                max-width: 100px;
+            }
+        }
+    }
+    .menu {
+        clear: both;
+        max-height: 0;
+        font-size: 1em;
+    }
+    .menu-icon {
+        cursor: pointer;
+        float: right;
+        padding: 28px 28px;
+        position: relative;
+        .nav-icon {
+            background: #333;
+            display: block;
+            height: 2px;
+            position: relative;
+            transition: background .2s ease-out;
+            width: 18px;
+        }
+    }
+}
+
+
+/* fin header */
+
+
+/* inicio menu */
+
+
+/* este apartado lo indicamos para ocultar el menu y luego asociarlo al botón*/
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    font-size: 1em;
+}
+
+
+/* menu icono */
+
+.header .menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 28px 28px;
+    position: relative;
+}
+
+.header .menu-icon .nav-icon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+
+/* botón de menu */
+
+.header .menu-btn {
+    display: none;
+}
+
+
+/*Indicamos así la extensión del menu a lo alto para que aparezcan todas los links*/
+
+.header .menu-btn:checked~.menu {
+    max-height: 300px;
+}
+
+
+/* MEDIA QUERIES */
+
+
+/* TABLET */
+
+@media screen and (min-width: $break-small) {
+    .header {
+        li {
+            float: left;
+            a {
+                padding: 20px 30px;
+            }
+        }
+        .menu {
+            clear: none;
+            float: right;
+            max-height: none;
+        }
+        .menu-icon {
+            display: none;
+        }
+    }
+}
+
+
+/* DESKTOP */
+
+@media all and (min-width: $break-large) {
+    .header {
+        .menu {
+            font-size: 0.8em;
+        }
+    }
+}
+
+
+/* fin menu */

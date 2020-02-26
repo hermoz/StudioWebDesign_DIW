@@ -1,0 +1,84 @@
+@import "../components/variables";
+
+/*contenido principal HOME*/
+
+
+/* Welcome start*/
+
+.introduction {
+    background-color: $color-white;
+    text-align: center;
+    padding: 20px;
+}
+
+.introduction h4 {
+    margin-top: 1px;
+    letter-spacing: 3px;
+    background-color: $color-yellow;
+}
+
+.introduction h3 span {
+    margin-top: 1px;
+    letter-spacing: 3px;
+    background-color: $color-yellow;
+}
+
+.introduction p {
+    color: $color-semi-black;
+    margin: 20px 20px;
+    font-size: 1em;
+}
+
+.introduction img {
+    width: 80%;
+    margin: 10px;
+}
+
+
+/* MEDIA QUERIES */
+
+
+/* TABLET */
+
+
+/* DESKTOP */
+
+@media all and (min-width: $break-large) {
+    .introduction {
+        p {
+            color: #b3b3b3;
+            margin: 20px 40px;
+            font-size: 15px;
+        }
+        img {
+            width: 60%;
+            margin: 10px;
+        }
+    }
+}
+
+
+/* Gallery Home start*/
+
+.gallery-home {
+    background-color: $color-white;
+    text-align: center;
+    padding: 15px;
+    img {
+        width: 100%;
+        margin: 0%;
+    }
+}
+
+@media screen and (min-width: $break-small) {
+    .gallery-home {
+        img {
+            width: 30%;
+            margin: 0%;
+            box-shadow: rgb(214, 214, 214) 0px 0px 10px;
+        }
+    }
+}
+
+
+/* Gallery Home end*/
